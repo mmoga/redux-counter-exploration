@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 
+import Counter from './Counter';
+
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>{this.props.count}</h1>
-        <button onClick={this.props.increment}>+</button>
-        <button onClick={this.props.decrement}>-</button>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
+        <Counter {...this.props}/>
       </div>
     );
   }
