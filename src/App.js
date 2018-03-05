@@ -3,7 +3,11 @@ import './App.css';
 import { connect } from 'react-redux';
 
 import Counter from './Counter';
-import { incrementAction, decrementAction } from './counter/actions';
+import { 
+  incrementAction, 
+  decrementAction, 
+  incrementByAction, 
+  decrementByAction } from './counter/actions';
 
 class App extends Component {
   render() {
@@ -27,6 +31,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => dispatch(incrementAction()),
     decrement: () => dispatch(decrementAction()),
+    incrementBy: (num) => dispatch(incrementByAction(num)),
+    decrementBy: (num) => dispatch(decrementByAction(num))
   }
 }
 
