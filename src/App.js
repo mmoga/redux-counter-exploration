@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 
 import Counter from './Counter';
 import { 
-  incrementAction, 
-  decrementAction, 
   incrementByAction, 
   decrementByAction } from './counter/actions';
 
@@ -29,8 +27,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    increment: () => dispatch(incrementAction()),
-    decrement: () => dispatch(decrementAction()),
     incrementBy: (num) => dispatch(incrementByAction(num)),
     decrementBy: (num) => dispatch(decrementByAction(num))
   }

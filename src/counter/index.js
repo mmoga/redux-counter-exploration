@@ -8,16 +8,6 @@ const initialState = {
 const countReducer = (state=initialState, action) => {
     console.log(action);
   switch(action.type) {
-    case types.INCREMENT: 
-      return {
-          ...state,
-          count: state.count + 1
-      };
-    case types.DECREMENT:
-      return {
-          ...state,
-          count: state.count - 1
-      };
     case types.DECREMENT_BY:
       return {
         ...state,
