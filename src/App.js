@@ -8,12 +8,23 @@ import {
   decrementByAction } from './counter/actions';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 0
+    }
+    this.handleValueChange = this.handleValueChange.bind(this);
+  }
+  handleValueChange(e) {
+    this.setState({
+      value: +e.target.value
+    })
+  }
   render() {
     return (
       <div>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
-        <Counter {...this.props}/>
+        <Counter {...this.props} {...this.state}/>
+        <input type="number" value={this.state.value} onChange={this.handleValueChange}/>
       </div>
     );
   }
